@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FFD700">
+  <meta http-equiv="refresh" content="6;url=index.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+
+  <title>Thank You | McLaren Money-Tization</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+    body{
+      background:#0a0a0a;color:white;-webkit-font-smoothing:antialiased;
+      min-height:100vh;display:flex;justify-content:center;align-items:center;
+      text-align:center;padding:20px;
+      background-image:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1508780709619-79562169bc64');
+      background-size:cover;background-position:center
+    }
+    .card{max-width:600px}
+    .checkmark{
+      width:70px;height:70px;border-radius:50%;border:3px solid #FFD700;
+      display:flex;justify-content:center;align-items:center;margin:0 auto 30px;
+      font-size:2rem;color:#FFD700
+    }
+    h1{font-size:2.6rem;color:#FFD700;margin-bottom:20px}
+    p{font-size:1.15rem;opacity:.95;line-height:1.6;margin-bottom:14px}
+    .redirect-note{font-size:.9rem;opacity:.6;margin-top:30px}
+    a{color:#FFD700;text-decoration:none;font-weight:600}
+    a:hover{text-decoration:underline}
+    .btn{
+      display:inline-block;margin-top:20px;padding:14px 36px;background:#FFD700;color:black;
+      font-weight:700;text-decoration:none;border-radius:50px;transition:.3s
+    }
+    .btn:hover{transform:scale(1.05)}
+    @media (max-width:600px){h1{font-size:2rem}}
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="checkmark">&#10003;</div>
+    <h1>Thank You!</h1>
+    <p>Your consultation request has been received. A consultant from <strong>McLaren Money-Tization</strong> will contact you shortly.</p>
+    <a href="index.html" class="btn">Return to Homepage</a>
+    <p class="redirect-note">You'll be redirected automatically in a few seconds...</p>
+  </div>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = "index.html";
+    }, 6000);
+  </script>
+</body>
+</html>
