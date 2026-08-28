@@ -57,16 +57,37 @@
     footer a:hover{text-decoration:underline}
     .footer-links{margin-top:15px;font-size:.9rem}
 
+    /* Floating up/down scroll nav */
+    .scroll-nav{
+      position:fixed;right:14px;top:50%;transform:translateY(-50%);
+      display:flex;flex-direction:column;gap:14px;z-index:1000
+    }
+    .scroll-btn{
+      width:52px;height:52px;border-radius:50%;background:#FFD700;color:black;
+      border:none;font-size:1.5rem;font-weight:700;display:flex;align-items:center;
+      justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.6);
+      transition:.2s;line-height:1
+    }
+    .scroll-btn:hover{transform:scale(1.1)}
+    .scroll-btn:active{transform:scale(0.95)}
+
     @media (max-width:600px){
       .hero h1{font-size:2rem}
       section{padding:40px 6%}
       .survey-card{padding:20px}
       .survey-card iframe{height:1500px}
+      .scroll-nav{right:10px;gap:10px}
+      .scroll-btn{width:46px;height:46px;font-size:1.3rem}
     }
   </style>
 </head>
 
 <body>
+  <div class="scroll-nav" aria-label="Scroll navigation">
+    <button class="scroll-btn" id="scroll-up-btn" aria-label="Scroll up">&#8593;</button>
+    <button class="scroll-btn" id="scroll-down-btn" aria-label="Scroll down">&#8595;</button>
+  </div>
+
   <header role="banner" aria-label="Surveys hero">
     <div class="hero">
       <h1>Complete Surveys For Money</h1>
@@ -78,7 +99,7 @@
   <main role="main">
     <section>
       <h3>Available Surveys</h3>
-      <p class="subtext">Fill out the survey below. Once submitted, tap Continue to complete the entry.</p>
+      <p class="subtext">Fill out the survey below. Once submitted, tap Continue to complete the entry. Use the arrows on the right to move through the page.</p>
 
       <div class="survey-card">
         <h4>Who Are You? — A Survey on Belief, Identity &amp; Society</h4>
@@ -108,5 +129,15 @@
       <a href="affiliate-disclosure.html" aria-label="Affiliate Disclosure">Affiliate Disclosure</a>
     </div>
   </footer>
+
+  <script>
+    const scrollAmount = 500;
+    document.getElementById('scroll-up-btn').addEventListener('click', function () {
+      window.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
+    });
+    document.getElementById('scroll-down-btn').addEventListener('click', function () {
+      window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
